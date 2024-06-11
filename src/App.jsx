@@ -1,11 +1,20 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Signup from './components/Forms/Signup'
+// import Navbar from './components/Navbar/Navbar'
 import './App.css'
 
 function App() {
 
   return (
-    <>
-    <h1 className='flex h-screen w-screen item-center justify-center text-3xl font-bold underline'>Our Resturant Website</h1>
-    </>
+    <Router>
+      {/* <div>
+        <Navbar/>
+      </div> */}
+      <Routes>
+        <Route path="/" element={<Signup />} />
+        {/* <Route path="/" element={<Navbar />} /> */}
+      </Routes>
+    </Router>
   )
 }
 
