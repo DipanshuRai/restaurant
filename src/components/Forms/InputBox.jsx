@@ -4,24 +4,16 @@ import { IoMdMail } from "react-icons/io";
 import PropTypes from 'prop-types'
 import "./form.css"
 
+const iconMap = {
+    "Username": FaUser,
+    "Email Address": IoMdMail,
+    "Password": FaLock,
+    "Phone Number": FaPhoneSquareAlt,
+};
 function InputBox(props) {
-    let IconComponent = null;
-    switch (props.placeholder) {
-    case "Username":
-        IconComponent = FaUser;
-        break;
-    case "Email Address":
-        IconComponent = IoMdMail;
-        break;
-    case "Password":
-        IconComponent = FaLock;
-        break;
-    case "Phone Number":
-        IconComponent = FaPhoneSquareAlt;
-        break;
-    default:
-        break;
-  }
+
+    const IconComponent = iconMap[props.placeholder] || null;
+
   return (
     <div className="input-box">
         <input type={props.type} placeholder={props.placeholder} required></input>

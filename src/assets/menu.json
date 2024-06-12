@@ -1,0 +1,241 @@
+{
+    "menu": {
+      "Burgers": [
+        {
+          "Food Item": "Aaloo Tikki Burger",
+          "Price": "₹60",
+          "Calories": 240,
+          "Description": "A crispy potato patty seasoned with Indian spices, served with lettuce, tomato, and our special sauce in a soft bun."
+        },
+        {
+          "Food Item": "Paneer Tikka Burger",
+          "Price": "₹90",
+          "Calories": 320,
+          "Description": "Grilled paneer tikka chunks with our special sauce, onions, and bell peppers in a whole grain bun."
+        },
+        {
+          "Food Item": "Aaloo Paneer Burger",
+          "Price": "₹120",
+          "Calories": 360,
+          "Description": "Grilled paneer tikka with aaloo patty in the middle of two fluffy buns served with our special sauce."
+        },
+        {
+          "Food Item": "Gourmet Masala Veggie Burger",
+          "Price": "₹200",
+          "Calories": 420,
+          "Description": "A rich, masala-infused vegetable patty with arugula, caramelized onions, and a tangy mint mayo on a pretzel bun."
+        },
+        {
+          "Food Item": "Chicken Tandoori Burger",
+          "Price": "₹80",
+          "Calories": 300,
+          "Description": "Marinated tandoori chicken breast with lettuce, tomato, and mint chutney in a toasted bun."
+        },
+        {
+          "Food Item": "Spicy Mutton Burger",
+          "Price": "₹120",
+          "Calories": 370,
+          "Description": "A succulent mutton patty with spicy mayo, pickled onions, and lettuce on a whole grain bun."
+        },
+        {
+          "Food Item": "Fish Filet Burger",
+          "Price": "₹90",
+          "Calories": 340,
+          "Description": "A crispy fish fillet marinated in spices with cabbage slaw and tartar sauce on a potato bun."
+        },
+        {
+          "Food Item": "Royal Maharaja Burger",
+          "Price": "₹250",
+          "Calories": 450,
+          "Description": "A double-layered burger with one spicy chicken patty and one mutton patty, topped with cheddar, lettuce, tomato, and a special royal sauce in a brioche bun."
+        }
+      ],
+      "Beverages": [
+        {
+          "Food Item": "Soft Drinks",
+          "Price": "₹40",
+          "Calories": "",
+          "Description": "Regular Soft drinks"
+        },
+        {
+          "Food Item": "Milkshake",
+          "Price": "₹120",
+          "Calories": 500,
+          "Description": "Creamy milkshake available in chocolate, vanilla, or strawberry."
+        },
+        {
+          "Food Item": "Hot Chocolate",
+          "Price": "₹130",
+          "Calories": 300,
+          "Description": "Creamy hot chocolate made with real cocoa and topped with marshmallows or whipped cream."
+        },
+        {
+          "Food Item": "Strawberry smoothie",
+          "Price": "₹120",
+          "Calories": 400,
+          "Description": "A refreshing smoothie made with fresh strawberries, yogurt, and a touch of honey."
+        },
+        {
+          "Food Item": "Mango Smoothie",
+          "Price": "₹120",
+          "Calories": 400,
+          "Description": "A tropical smoothie made with ripe mangoes, yogurt, and a hint of lime."
+        },
+        {
+          "Food Item": "Cold coffee",
+          "Price": "₹120",
+          "Calories": 260,
+          "Description": "A nice chilled cold coffee with freshly ground coffee."
+        }
+      ],
+      "Sides": [
+        {
+          "Food Item": "Fries (S/M/L)",
+          "Price": "₹40/60/80",
+          "Calories": "200/250/300",
+          "Description": "Generic fried available In three sizes."
+        },
+        {
+          "Food Item": "Onion Rings",
+          "Price": "₹80",
+          "Calories": 350,
+          "Description": "Crispy onion rings with cheese."
+        },
+        {
+          "Food Item": "Chicken Nuggets",
+          "Price": "₹80",
+          "Calories": 350,
+          "Description": "10 pc chicken nuggets made after killing fattest chickens."
+        },
+        {
+          "Food Item": "Cheese Bites",
+          "Price": "₹90",
+          "Calories": 350,
+          "Description": "Cheese filled small potato bites will make you come… To us again."
+        }
+      ],
+      "Wraps": [
+        {
+          "Food Item": "Paneer Tikka Wrap",
+          "Price": "₹120",
+          "Calories": 350,
+          "Description": "Grilled paneer tikka with bell peppers and onions, wrapped in a whole wheat roti."
+        },
+        {
+          "Food Item": "Falafel Wrap",
+          "Price": "₹140",
+          "Calories": 380,
+          "Description": "Crispy falafel balls with hummus, lettuce, and pickled vegetables, wrapped in a pita bread."
+        },
+        {
+          "Food Item": "Chicken Kebab wrap",
+          "Price": "₹150",
+          "Calories": 360,
+          "Description": "Spiced chicken seekh kebab with mint chutney and salad, wrapped in a paratha."
+        },
+        {
+          "Food Item": "Tandoori Chicken Wrap",
+          "Price": "₹160",
+          "Calories": 380,
+          "Description": "Smoky tandoori chicken pieces with lettuce and a creamy sauce, wrapped in a naan."
+        }
+      ],
+      "Tacos": [
+        {
+          "Food Item": "Veg taco",
+          "Price": "₹60",
+          "Calories": 180,
+          "Description": "Spiced mixed vegetables with salsa, sour cream, and cheese in a soft taco shell."
+        },
+        {
+          "Food Item": "Chicken taco",
+          "Price": "₹80",
+          "Calories": 200,
+          "Description": "Grilled chicken tikka with onions, cilantro, and a tangy yogurt sauce in a soft taco shell."
+        }
+      ],
+      "Sauces": [
+        {
+          "Food Item": "Ketchup",
+          "Price": "₹2",
+          "Calories": "",
+          "Description": "Classic tomato-based sauce, slightly sweet and tangy."
+        },
+        {
+          "Food Item": "Mayonnaise",
+          "Price": "₹10",
+          "Calories": "",
+          "Description": "Creamy and rich sauce made from eggs and oil, perfect for sandwiches and burgers."
+        },
+        {
+          "Food Item": "Honey Mustard",
+          "Price": "₹20",
+          "Calories": "",
+          "Description": "A blend of honey and mustard, offering a sweet and tangy flavor."
+        },
+        {
+          "Food Item": "BBQ sauce",
+          "Price": "₹20",
+          "Calories": "",
+          "Description": "A smoky and slightly sweet sauce, great for grilled meats and burgers."
+        },
+        {
+          "Food Item": "Ranch",
+          "Price": "₹20",
+          "Calories": "",
+          "Description": "Creamy dressing made with buttermilk, garlic, and herbs, perfect for salads and dipping."
+        },
+        {
+          "Food Item": "Tandoori Mayo",
+          "Price": "₹20",
+          "Calories": "",
+          "Description": "Delicious Tandoori Mayo as a dip for your food items."
+        },
+        {
+          "Food Item": "Chipotle Mayo",
+          "Price": "₹20",
+          "Calories": "",
+          "Description": "A smoky and spicy mayonnaise-based sauce with chipotle peppers."
+        }
+      ],
+      "Desserts": [
+        {
+          "Food Item": "Ice cream",
+          "Price": "₹40",
+          "Calories": 240,
+          "Description": "A yummy soft serve available in Chocolate and vanilla."
+        },
+        {
+          "Food Item": "Choco lava cake",
+          "Price": "₹110",
+          "Calories": 300,
+          "Description": "Delicious choco lava cake with chocolate oozing out."
+        },
+        {
+          "Food Item": "Chocolate Sundae",
+          "Price": "₹100",
+          "Calories": 280,
+          "Description": "Creamy sweet cold chocolate sundae with choco chips and honey."
+        },
+        {
+          "Food Item": "Cheesecake",
+          "Price": "₹120",
+          "Calories": 320,
+          "Description": "Soft, creamy, yummy cheesecake made with high quality cheese."
+        },
+        {
+          "Food Item": "Chocolate chip cookie",
+          "Price": "₹40",
+          "Calories": 200,
+          "Description": "A generic Chocochip cookie, just more expensive."
+        },
+        {
+          "Food Item": "Brownie Sundae",
+          "Price": "₹150",
+          "Calories": 380,
+          "Description": "A delectable brownie sundae with a brownie and ice cream."
+        }
+      ]
+    }
+  }
+  
