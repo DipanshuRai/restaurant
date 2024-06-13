@@ -18,7 +18,7 @@ export default function SignUp() {
           <InputBox type="password" placeholder="Password" icon={FaLock} />
           <InputBox type="tel" placeholder="Phone Number" icon={FaPhoneSquareAlt} />
           <SubmitButton submissionType='Sign Up'/>
-          <div className="signup-link">
+          <div className="login-link">
             <p>Already have an account? <Link to="/Login">Log In</Link></p>
           </div>
         </form>

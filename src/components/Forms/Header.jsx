@@ -9,8 +9,5 @@ function Header(props) {
   )
 }
 
-Header.propTypes = {
-  title: PropTypes.string.isRequired,
-};
 
 export default Header
