@@ -1,30 +1,20 @@
-import React from 'react'
-import { FaUser,FaLock,FaPhoneSquareAlt } from "react-icons/fa";
-import { IoMdMail } from "react-icons/io";
-import PropTypes from 'prop-types'
-import "./form.css"
+import React from 'react';
+import PropTypes from 'prop-types';
+import "./form.css";
 
-const iconMap = {
-    "Username": FaUser,
-    "Email Address": IoMdMail,
-    "Password": FaLock,
-    "Phone Number": FaPhoneSquareAlt,
-};
-function InputBox(props) {
-
-    const IconComponent = iconMap[props.placeholder] || null;
-
+function InputBox({ type, placeholder, icon: IconComponent }) {
   return (
     <div className="input-box">
-        <input type={props.type} placeholder={props.placeholder} required></input>
-        {IconComponent &&<IconComponent className='icon'/>}
+      <input type={type} placeholder={placeholder} required />
+      {IconComponent && <IconComponent className='icon' />}
     </div>
   );
 }
 
-InputBox.propTypes={
-    type: PropTypes.string.isRequired,
-    placeholder: PropTypes.string.isRequired
+InputBox.propTypes = {
+  type: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  icon: PropTypes.elementType,
 };
 
 export default InputBox;
