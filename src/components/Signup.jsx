@@ -43,8 +43,9 @@ export default function SignUp() {
             onChange={(e) => setPhoneNumber(e.target.value)}
           />
           <SubmitButton submissionType='Sign Up'/>
-          <div className="signup-link">
-            <p>Already have an account? <Link to="/Login">Log In</Link></p>
+          <div className="login-link">
+            <p>Already have an account? <Link to="/login">Log In</Link></p>
+            <p>Back to <Link to="../App">Home</Link></p>
           </div>
         </form>
       </div>
