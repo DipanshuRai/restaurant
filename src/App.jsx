@@ -1,27 +1,36 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Signup from './components/Signup'
-import Login from './components/Login'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import Signup from './components/Signup';
+import Login from './components/Login';
+import Navbar from './components/Navbar';
 import Details from './components/Details'
 import Footer from './components/Footer/Footer'
-// import Navbar from './components/Navbar/Navbar'
-import './App.css'
+import './App.css';
 
 function App() {
-
   return (
     <Router>
-      {/* <div>
-        <Navbar/>
-      </div> */}
-      <Routes>
-        {/* <Route path='/' element={<Hero/>} /> */}
-        <Route path='/Details' element={<Details/>} />
-        <Route path="/Signup" element={<Signup />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/Footer" element={<Footer />} />
-      </Routes>
+      <MainContent />
     </Router>
-  )
+  );
 }
 
-export default App
+function MainContent() {
+  const location = useLocation();
+  const hideNavbarPaths = ['/signup', '/login'];
+  const shouldHideNavbar = hideNavbarPaths.includes(location.pathname);
+
+  return (
+    <>
+      {!shouldHideNavbar && <Navbar />}
+      {!shouldHideNavbar && <Details/>}
+      {!shouldHideNavbar && <Footer/>}
+      <Routes>
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </>
+  );
+}
+
+export default App;
