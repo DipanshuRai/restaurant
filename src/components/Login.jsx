@@ -29,7 +29,8 @@ export default function Login() {
           />
           <SubmitButton submissionType='Log In'/>
           <div className="login-link">
-            <p>Don't have an account?<Link to="/Signup"> Sign Up</Link></p>
+            <p>Don't have an account?<Link to="/signup"> Sign Up</Link></p>
+            <p>Back to <Link to="../App">Home</Link></p>
           </div>
         </form>
       </div>
