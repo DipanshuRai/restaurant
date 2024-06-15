@@ -9,7 +9,7 @@ const BeverageMenu = () => {
     // Function to generate beverage cards
     const renderBeverageCards = () => {
         return beverages.map((beverage, index) => (
-            <div key={index} className="beverage-item">
+            <div key={index} className="beverage-item" >
                 <h3>{beverage["Food Item"]}</h3>
                 <p className='p1'>Price: {beverage.Price}</p>
                 {beverage.Calories && <p>Calories: {beverage.Calories}</p>}
