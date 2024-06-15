@@ -77,7 +77,7 @@ const HeroSlider = () => {
               ))}
             </h1>
             <p className="body-2 hero-text slider-reveal">{item.text}</p>
-            <a href="#" className="center btn btn-primary slider-reveal">
+            <a href="/Menu" className="center btn btn-primary slider-reveal">
               <span className="text text-1">View Our Menu</span>
               <span className="text text-2" aria-hidden="true">View Our Menu</span>
             </a>

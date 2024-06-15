@@ -20,27 +20,27 @@ const Details = () => {
         <ul className="grid-list">
           <li>
             <div className="service-card">
-              <a href="#" className="has-before hover:shine">
+              <a href="/Menu" className="has-before hover:shine">
                   <img src={burger} width="285" height="336" loading="lazy" className="img-cover" />
               </a>
               <div className="card-content">
                 <h3 className="title-4 card-title">
-                  <a href="#">Breakfast</a>
+                  <a href="/Menu">Breakfast</a>
                 </h3>
-                <a href="#" className="btn-text hover-underline label-2">View Menu</a>
+                <a href="/Menu" className="btn-text hover-underline label-2">View Menu</a>
               </div>
             </div>
           </li>
           <li>
             <div className="service-card">
-              <a href="#" className="has-before hover:shine">
+              <a href="/Menu" className="has-before hover:shine">
                   <img src={deserts} width="285" height="336" loading="lazy" className="img-cover" />
               </a>
               <div className="card-content">
                 <h3 className="title-4 card-title">
-                  <a href="#">Desserts</a>
+                  <a href="/Menu">Desserts</a>
                 </h3>
-                <a href="#" className="btn-text hover-underline label-2">View Menu</a>
+                <a href="/Menu" className="btn-text hover-underline label-2">View Menu</a>
               </div>
             </div>
           </li>

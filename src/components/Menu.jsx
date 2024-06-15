@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Menu.css';
+import './css/Menu.css';
 
 import coldCoffee from '../assets/menu-images/beverages/cold-coffee.jpg';
 import hotChocolate from '../assets/menu-images/beverages/hot-chocolate.jpg';
