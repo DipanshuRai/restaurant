@@ -129,7 +129,7 @@ const Menu = () => {
         {recommendation.map((item, index) => (
           <div key={index} className="recommended-item">
             <div className="recommended-image" style={{ backgroundImage: `url(${item.image})` }}>
-              <div className="newt"><a href = {item.category.charAt(0).toUpperCase() + item.category.slice(1)}>{item.category.charAt(0).toUpperCase() + item.category.slice(1)}</a></div>
+              <div className="newt"><a href = {"Menu/" + item.category.charAt(0).toUpperCase() + item.category.slice(1)}>{item.category.charAt(0).toUpperCase() + item.category.slice(1)}</a></div>
             </div>
           </div>
         ))}

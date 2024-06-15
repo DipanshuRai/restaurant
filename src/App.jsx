@@ -42,11 +42,13 @@ function MainContent({ isLoginVisible, setIsLoginVisible, isBookTableVisible, se
       <div className={`main-content ${(isLoginVisible || isBookTableVisible) ? 'blurred' : ''}`}>
         <Routes>
           <Route path='/' element={<Land />} />
-          <Route path="/signup" element={<Signup setIsSignUpVisible={setIsSignUpVisible} setIsLoginVisible={setIsLoginVisible} />} />
-          <Route path="/login" element={<Login setIsLoginVisible={setIsLoginVisible} setIsSignUpVisible={setIsSignUpVisible} />} />
+
           <Route path="/Menu" element={<Menu />} />
           <Route exact path = "/Menu/Beverages" element = {<Beverages />} />
+
+          <Route path="/login" element={<Login setIsLoginVisible={setIsLoginVisible} />} />
           <Route path="/book-table" element={<BookTable setIsBookTableVisible={setIsBookTableVisible} />} />
+
         </Routes>
       </div>
       {isLoginVisible && <Login setIsLoginVisible={setIsLoginVisible} />}
