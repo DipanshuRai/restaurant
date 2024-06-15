@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './css/Menu.css';
 
+// Import images (replace with your actual image paths)
 import coldCoffee from '../assets/menu-images/beverages/cold-coffee.jpg';
 import hotChocolate from '../assets/menu-images/beverages/hot-chocolate.jpg';
 import mangoSmoothie from '../assets/menu-images/beverages/mango-smoothie.webp';
@@ -45,6 +46,8 @@ import falafelWrap from '../assets/menu-images/wraps/falafel-wrap.jpg';
 import paneerTikkaWrap from '../assets/menu-images/wraps/paneer-tikka-wrap.jpg';
 import tandooriChickenWrap from '../assets/menu-images/wraps/tandoori-chicken-wrap.jpg';
 
+import menubg from '../assets/menu-images/menubg_fin.jpg'; // Background image
+
 const Menu = () => {
   const categories = ['beverages', 'burger', 'desserts', 'sauces', 'sides', 'taco', 'wraps'];
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -84,14 +87,14 @@ const Menu = () => {
   };
 
   return (
-    <>
+    <div className="menu-container" style={{ backgroundImage: `url(${menubg})` }}>
       <div className="recommendation">
         {recommendation.map((item, index) => (
           <div key={index} className="recommended-item">
             <h3 className="tex">
               <u>
                 <i>
-                  <b>~~  WE SUGGEST ~~</b>
+                  <b>~~ WE SUGGEST ~~</b>
                 </i>
               </u>
             </h3>
@@ -131,7 +134,7 @@ const Menu = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
