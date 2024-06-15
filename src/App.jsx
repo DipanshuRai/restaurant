@@ -23,7 +23,7 @@ function MainContent() {
 
   return (
     <>
-      {/* {!shouldHideNavbar && <Navbar />} */}
+      {!shouldHideNavbar && <Navbar />}
       {!shouldHideNavbar && <Landing/>}
       {!shouldHideNavbar && <Details/>}
       {!shouldHideNavbar && <Footer/>}

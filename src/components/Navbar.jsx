@@ -21,8 +21,8 @@ function Navbar() {
     <>
       <Navlink to="/">Home</Navlink>
       <Navlink to="/Menu">Menu</Navlink>
-      <Navlink to="/About Us">About Us</Navlink>
-      <Navlink to="/Our Chefs">Our Chefs</Navlink>
+      <Navlink to="/Aboutus">About Us</Navlink>
+      <Navlink to="/Ourchefs">Our Chefs</Navlink>
       <Navlink to="/Contact">Contact</Navlink>
     </>
   );
