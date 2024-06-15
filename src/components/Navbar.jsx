@@ -6,21 +6,15 @@ import Navlink from './Navbar/Navlink';
 import SignBtn from './Navbar/SignBtn';
 import './Navbar/navbar.css';
 
-function Navbar({ setIsLoginVisible, setIsBookTableVisible }) {
+function Navbar({ setIsBookTableVisible }) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const toggleLogin = () => {
-    setIsLoginVisible((prev) => !prev);
-    setIsBookTableVisible(false); // Ensure Book Table is closed when Login is opened
-  };
-
   const toggleBookTable = () => {
     setIsBookTableVisible((prev) => !prev);
-    setIsLoginVisible(false); // Ensure Login is closed when Book Table is opened
   };
 
   const renderNavLinks = () => (

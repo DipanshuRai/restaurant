@@ -11,14 +11,11 @@ import Beverages from './components/menu-items/beverages';
 import './App.css';
 
 function App() {
-  const [isLoginVisible, setIsLoginVisible] = useState(false);
   const [isBookTableVisible, setIsBookTableVisible] = useState(false);
 
   return (
     <Router>
       <MainContent
-        isLoginVisible={isLoginVisible}
-        setIsLoginVisible={setIsLoginVisible}
         isBookTableVisible={isBookTableVisible}
         setIsBookTableVisible={setIsBookTableVisible}
       />
@@ -26,32 +23,29 @@ function App() {
   );
 }
 
-function MainContent({ isLoginVisible, setIsLoginVisible, isBookTableVisible, setIsBookTableVisible }) {
+function MainContent({ isBookTableVisible, setIsBookTableVisible }) {
   const location = useLocation();
 
   useEffect(() => {
     if (location.pathname === '/') {
-      setIsLoginVisible(false);
       setIsBookTableVisible(false);
     }
   }, [location.pathname]);
 
   return (
     <>
-      <Navbar setIsLoginVisible={setIsLoginVisible} setIsBookTableVisible={setIsBookTableVisible} />
-      <div className={`main-content ${(isLoginVisible || isBookTableVisible) ? 'blurred' : ''}`}>
+      <Navbar setIsBookTableVisible={setIsBookTableVisible} />
+      <div className="main-content">
         <Routes>
           <Route path='/' element={<Land />} />
 
           <Route path="/Menu" element={<Menu />} />
           <Route exact path = "/Menu/Beverages" element = {<Beverages />} />
 
-          <Route path="/login" element={<Login setIsLoginVisible={setIsLoginVisible} />} />
           <Route path="/book-table" element={<BookTable setIsBookTableVisible={setIsBookTableVisible} />} />
 
         </Routes>
       </div>
-      {isLoginVisible && <Login setIsLoginVisible={setIsLoginVisible} />}
       {isBookTableVisible && <BookTable setIsBookTableVisible={setIsBookTableVisible} />}
     </>
   );
@@ -59,7 +53,7 @@ function MainContent({ isLoginVisible, setIsLoginVisible, isBookTableVisible, se
 
 function Land() {
   const location = useLocation();
-  const hideNavbarPaths = ['/book-table', '/login'];
+  const hideNavbarPaths = ['/book-table'];
   const shouldHideNavbar = hideNavbarPaths.includes(location.pathname);
   return (
     <>
