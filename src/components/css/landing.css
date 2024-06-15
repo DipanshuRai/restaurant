@@ -1,0 +1,150 @@
+.hero {
+    position: relative;
+    padding-block: 120px;
+    min-height: 100vh;
+    overflow: hidden;
+    place-content: center;
+    z-index: 1;
+}
+
+.slider-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    place-content: center;
+    padding-block-start: 100px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1000ms ease;
+    z-index: 1;
+}
+
+.slider-item.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.slider-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.15);
+    pointer-events: none;
+    user-select: none;
+    z-index: -1;
+}
+.hero .btn { margin-inline: auto; }
+
+.slider-item.active .slider-bg {
+    animation: smoothScale 7s linear forwards;
+}
+
+@keyframes smoothScale {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.15); }
+}
+
+
+
+.slider-reveal {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+.slider-item.active .slider-reveal {
+    animation: sliderReveal 1s ease forwards;
+  }
+  
+  @keyframes sliderReveal {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
+.slider-item.active .section-subtitle { animation-delay: 500ms; }
+.slider-item.active .hero-title { animation-delay: 1000ms; }
+.slider-item.active .hero-text { animation-delay: 1.5s; }
+.slider-item.active .btn { animation-delay: 2s; }
+
+
+.hero .btn {
+    position: relative;
+    color: hsl(38, 61%, 73%);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    max-width: max-content;
+    margin: 45px;
+    border: 2px solid hsl(38, 61%, 73%);
+    padding: 12px 45px;
+    overflow: hidden;
+    align-self: center;
+    z-index: 1;
+}
+    
+.hero .btn::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200%;
+    height: 200%;
+    border-radius:  50%;
+    background-color: hsl(38, 61%, 73%);
+    transition: 500ms ease;
+    z-index: -1;
+}
+
+.hero .btn .text { transition: 250ms ease; }
+
+.hero .btn .text-2 {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: max-content;
+    color:hsla(40, 12%, 5%, 1);
+}
+
+.btn:is(:hover, :focus-visible)::before { bottom: -50%; }
+
+.btn:is(:hover, :focus-visible) .text-1 { transform: translateY(-40px); }
+
+.btn:is(:hover, :focus-visible) .text-2 {
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+    
+
+
+.display-1 {
+  color: hsla(0, 0%, 100%, 1);
+  font-family: 'Forum', cursive;
+  font-weight: 400;
+  line-height: 1.2em;
+  font-size: calc(1.3rem + 6.7vw);
+  line-height: 1em;
+}
+
+.body-2 {
+  font-size: 2.4rem;
+  line-height: 1.6em;
+}
+
+.label-2 { font-size: 1.2rem; }
+
