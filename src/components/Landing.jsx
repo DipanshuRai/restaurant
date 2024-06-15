@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Slider3 from './Forms/images/cak.jpeg'
 import Slider2 from './Forms/images/bg.jpeg'
 import Slider1 from '../assets/images/hero-slider-1.jpg'
@@ -46,6 +47,8 @@ const HeroSlider = () => {
     const prevPos = currentSlidePos <= 0 ? heroSliderItems.length - 1 : currentSlidePos - 1;
     updateSliderPos(prevPos);
   };
+
+  
 
   useEffect(() => {
     const autoSlideInterval = setInterval(slideNext, 7000);
