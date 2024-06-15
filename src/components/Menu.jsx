@@ -91,11 +91,7 @@ const Menu = () => {
         {recommendation.map((item, index) => (
           <div key={index} className="recommended-item">
             <h3 className="tex">
-              <u>
-                <i>
-                  <b>~~ WE SUGGEST ~~</b>
-                </i>
-              </u>
+              OUR SUGGESTIONS
             </h3>
             <div className="recommended-image" style={{ backgroundImage: `url(${item.image})` }}>
               <div className="newt">{item.category.charAt(0).toUpperCase() + item.category.slice(1)}</div>
