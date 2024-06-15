@@ -7,13 +7,13 @@
     align-items: center;
     min-height: 100vh;
     background-size: cover;
-    background-image: url('./images/background.jpg');
+    background-image: url('./images/bg.jpeg');
 }
 
 .main {
     width:400px;
     margin: 0 auto;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(185, 185, 185, 0.1);
     backdrop-filter: blur(20px);
     color: #fff;
     border-radius: 10px;
