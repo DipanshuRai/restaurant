@@ -17,24 +17,33 @@ function App() {
   );
 }
 
-function MainContent() {
-  const location = useLocation();
-  const hideNavbarPaths = ['/signup', '/login'];
-  const shouldHideNavbar = hideNavbarPaths.includes(location.pathname);
 
-  return (
-    <>
-      {!shouldHideNavbar && <Navbar />}
-      {!shouldHideNavbar && <Landing/>}
-      {!shouldHideNavbar && <Details/>}
-      {!shouldHideNavbar && <Footer/>}
+function MainContent() {
+return (
+  <>
       <Routes>
+        <Route path='/' element={<Land/>}/>
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/menu" element={<Menu />} />
+        <Route path="/Menu" element={<Menu />} />
       </Routes>
+      
     </>
   );
+}
+
+function Land(){
+    const location = useLocation();
+    const hideNavbarPaths = ['/signup', '/login'];
+  const shouldHideNavbar = hideNavbarPaths.includes(location.pathname);
+  return (
+    <>
+    {!shouldHideNavbar && <Navbar />}
+    {!shouldHideNavbar && <Landing/>}
+    {!shouldHideNavbar && <Details/>}
+    {!shouldHideNavbar && <Footer/>}
+    </>
+  )
 }
 
 export default App;
