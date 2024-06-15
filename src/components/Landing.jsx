@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Slider3 from './Forms/images/cak.jpeg'
 import Slider2 from './Forms/images/bg.jpeg'
 import Slider1 from '../assets/images/hero-slider-1.jpg'
@@ -77,10 +77,10 @@ const HeroSlider = () => {
               ))}
             </h1>
             <p className="body-2 hero-text slider-reveal">{item.text}</p>
-            <a href="/Menu" className="center btn btn-primary slider-reveal">
+            <Link to="/Menu" className="center btn btn-primary slider-reveal">
               <span className="text text-1">View Our Menu</span>
               <span className="text text-2" aria-hidden="true">View Our Menu</span>
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

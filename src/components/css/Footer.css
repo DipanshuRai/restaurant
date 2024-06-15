@@ -31,7 +31,7 @@
     align-items: center;
     min-height: 100vh;
     min-width: 100vw;
-    background: url('./sub-components/footer-bg1.png') no-repeat center center;
+    background: url('../Footer/sub-components/footer-bg1.png') no-repeat center center;
     background-size: cover;
     background-color: var(--eerie-black-1);
     font-size: var(--fontSize-body-4);
@@ -72,7 +72,7 @@
     height: 37em;
     width: 34em;
     padding: 100px 40px;
-    background: var(--smoky-black-1) url("./sub-components/footer-form-bg.png");
+    background: var(--smoky-black-1) url("../Footer/sub-components/footer-form-bg.png");
     background-position: center top;
     background-repeat: repeat;
     align-items: center;
@@ -86,7 +86,7 @@
     top: 0;
     width: 15px;
     height: 100%;
-    background-image: url("./sub-components/footer-form-pattern.svg");
+    background-image: url("../Footer/sub-components/footer-form-pattern.svg");
     content: '';
     position: absolute;
   }
@@ -230,6 +230,3 @@
     color: var(--gold-crayola);
     text-decoration: underline;
   }
-
-
-  

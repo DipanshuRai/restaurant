@@ -1,7 +1,8 @@
 import React from 'react';
-import './Footer.css';
+import './css/Footer.css';
+import { Link } from 'react-router-dom';
 import { IoMdMail } from "react-icons/io";
-import Separator from "./sub-components/separator.svg"
+import Separator from "./Footer/sub-components/separator.svg";
 
 const Footer = () => {
   return (
@@ -11,20 +12,20 @@ const Footer = () => {
 
           {/* Center Box */}
           <div className="footer-brand has-before has-after">
-            <a href="#" className="logo">
-              Resto Logo
-            </a>
+            <Link to="/" className="logo">
+              Our Restaurant
+            </Link>
             <div className='text'>
               <address className="body-4">
                 IIIT Guwahati, Kamrup, Guwahati, India
               </address>
-              <a href="mailto:webdevteam@iiitg.com" className="body-4 contact-link">
+              <Link to="/" className="body-4 contact-link">
                 webdevteam@iiitg.com
-              </a>
-              <a href="tel:+88123123456" className="body-4 contact-link">
-                Booking Request : +91-123-123456
-              </a>
-              <p className="body-4">Open : 09:00 am - 01:00 pm</p>
+              </Link>
+              <Link to="/" className="body-4 contact-link">
+                Booking Request : +91 123-XXXXX-69
+              </Link>
+              <p className="body-4">Open : 09:00 am - 10:00 pm</p>
             </div>
             <div className="wrapper">
               <img src={Separator} width="30%" alt="" />
@@ -37,44 +38,43 @@ const Footer = () => {
               <div className="icon-wrapper">
                 <IoMdMail className="react-icon" aria-hidden="true" />
                 <input
-                    type="email"
+                  type="email"
                   name="email_address"
                   placeholder="Your email"
-                  autoComplete="off"
                   className="input-field"
                 />
               </div>
               <button type="submit" className="btn btn-secondary">
-                <span className='btn-text'>SUBSCRIBE</span>              </button>
+                <span className='btn-text'>SUBSCRIBE</span></button>
             </form>
           </div>
 
           {/* Left List */}
           <ul className="footer-list list-1">
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">
+              <Link to="/" className="label-2 footer-link hover-underline">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">
+              <Link to="/Menu" className="label-2 footer-link hover-underline">
                 Menus
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">
+              <Link to="/Aboutus" className="label-2 footer-link hover-underline">
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">
+              <Link to="/Ourchefs" className="label-2 footer-link hover-underline">
                 Our Chefs
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">
+              <Link to="/Contact" className="label-2 footer-link hover-underline">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
 
@@ -82,38 +82,38 @@ const Footer = () => {
           {/* Right List */}
           <ul className="footer-list list-2">
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">
+              <Link to="/" className="label-2 footer-link hover-underline">
                 Facebook
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">
+              <Link to="/" className="label-2 footer-link hover-underline">
                 Instagram
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">
+              <Link to="/" className="label-2 footer-link hover-underline">
                 Twitter
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">
+              <Link to="/" className="label-2 footer-link hover-underline">
                 Youtube
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">
+              <Link to="/" className="label-2 footer-link hover-underline">
                 Google Map
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
         <div className="footer-bottom">
           <p className="copyright">
-            &copy; 2024 Web Dev Team. All Rights Reserved | Crafted by{' '}
-            <a href="#" target="_blank" className="link">
-              TO BE FILLED
-            </a>
+            &copy; 2024 Web Dev Team. All Rights Reserved | Crafted by .
+            <Link to="/Ourchefs" className="link">
+              Our Team
+            </Link>
           </p>
         </div>
       </div>

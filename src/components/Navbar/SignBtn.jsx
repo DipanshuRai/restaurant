@@ -1,11 +1,10 @@
 import React from 'react';
+import './navbar.css';
 
-function SignBtn({ onClick }) {
-  return (
-    <button className="sign-btn" onClick={onClick}>
-      Sign In
-    </button>
-  );
-}
+const SignBtn = ({ onClick, text }) => (
+  <button className="sign-btn" onClick={onClick}>
+    {text}
+  </button>
+);
 
 export default SignBtn;
