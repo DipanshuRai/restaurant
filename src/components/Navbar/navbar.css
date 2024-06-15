@@ -1,7 +1,7 @@
 header{
     position: relative;
     padding: 0 2rem;
-    background-image: url('../Forms/images/background.jpg');
+    background-image: url('../Footer/sub-components/footer-bg1.png');
     z-index: 10;
 }
 
