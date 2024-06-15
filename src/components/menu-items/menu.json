@@ -55,37 +55,43 @@
           "Food Item": "Soft Drinks",
           "Price": "₹40",
           "Calories": "",
-          "Description": "Regular Soft drinks"
+          "Description": "Regular Soft drinks",
+          "Image": "soft-drinks.jpg"
         },
         {
           "Food Item": "Milkshake",
           "Price": "₹120",
           "Calories": 500,
-          "Description": "Creamy milkshake available in chocolate, vanilla, or strawberry."
+          "Description": "Creamy milkshake available in chocolate, vanilla, or strawberry.",
+          "Image": "milkshake.webp"
         },
         {
           "Food Item": "Hot Chocolate",
           "Price": "₹130",
           "Calories": 300,
-          "Description": "Creamy hot chocolate made with real cocoa and topped with marshmallows or whipped cream."
+          "Description": "Creamy hot chocolate made with real cocoa and topped with marshmallows or whipped cream.",
+          "Image": "hot-chocolate.jpg"
         },
         {
           "Food Item": "Strawberry smoothie",
           "Price": "₹120",
           "Calories": 400,
-          "Description": "A refreshing smoothie made with fresh strawberries, yogurt, and a touch of honey."
+          "Description": "A refreshing smoothie made with fresh strawberries, yogurt, and a touch of honey.",
+          "Image": "strawberry-smoothie.jpg"
         },
         {
           "Food Item": "Mango Smoothie",
           "Price": "₹120",
           "Calories": 400,
-          "Description": "A tropical smoothie made with ripe mangoes, yogurt, and a hint of lime."
+          "Description": "A tropical smoothie made with ripe mangoes, yogurt, and a hint of lime.",
+          "Image": "mango-smoothie.webp"
         },
         {
           "Food Item": "Cold coffee",
           "Price": "₹120",
           "Calories": 260,
-          "Description": "A nice chilled cold coffee with freshly ground coffee."
+          "Description": "A nice chilled cold coffee with freshly ground coffee.",
+          "Image": "cold-coffee.jpg"
         }
       ],
       "Sides": [

@@ -1,14 +1,12 @@
-/* this is the css file */
 .menu {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap; /* Ensure items are on a single line */
-  overflow-x: auto; /* Add horizontal scrolling if needed */
-  background-image: url('../assets/menu-images/menubg_fin.jpg');
+  flex-wrap: nowrap; 
+  overflow-x: auto; 
   background-size: cover;
   background-position: center;
-  padding: 5px; /* Optional padding */
+  padding: 5px; 
   padding-top: 70px;
 }
 
@@ -38,6 +36,7 @@
 
 .category h3 {
   background-color: rgba(255, 255, 255, 0.5); 
+  background-image: linear-gradient(white, yellow);
   backdrop-filter: blur(3px);
   border-radius: 10px;
   position: relative;
@@ -93,16 +92,7 @@
   font-weight: bolder;
   font-size: 30px;
   font-family:Arial, Helvetica, sans-serif;
-}
-
-.category-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.category-list li {
-  margin: 10px 0;
+  background-image: linear-gradient(white, yellow);
 }
 
 .recommendation {
@@ -117,17 +107,3 @@
   display: none;
 }
 
-.belowText {
-  font-size: 40px;
-  display: flex;
-  justify-content: center;
-  font-style: italic;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  background-image: repeating-radial-gradient(red, pink);
-  border-style: ridge;
-  border: 2px solid pink;
-  height: 60px;
-  width: 1000px;
-  border-radius: 40px;
-  margin-top: 100px;
-}

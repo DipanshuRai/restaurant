@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './css/Menu.css';
 
+
+
 import coldCoffee from '../assets/menu-images/beverages/cold-coffee.jpg';
 import hotChocolate from '../assets/menu-images/beverages/hot-chocolate.jpg';
 import mangoSmoothie from '../assets/menu-images/beverages/mango-smoothie.webp';
@@ -85,19 +87,18 @@ const Menu = () => {
     setSelectedCategory(category);
   };
 
-
   return (
     <div className="menu-container" style={{ backgroundImage: `url(${menubg})` }}>
-      
+
       <div className="menu">
         {categories.map((category) => (
           <div
-          key={category}
-          className={`category ${category} ${selectedCategory !== category && selectedCategory !== '' ? '' : 'hidden'}`}
+            key={category}
+            className={`category ${category} ${selectedCategory !== category && selectedCategory !== '' ? '' : 'hidden'}`}
             onClick={() => handleCategoryClick(category)}
           >
             <div className="category-content">
-              <h3>{category.charAt(0).toUpperCase() + category.slice(1)}</h3>
+              <h3><a href={"Menu/"+category.charAt(0).toUpperCase() + category.slice(1)}>{category.charAt(0).toUpperCase() + category.slice(1)}</a></h3>
             </div>
             {category === 'beverages' && categoryImages.beverages && (
               <div className="beverage-image side-1" style={{ backgroundImage: `url(${categoryImages.beverages[Math.floor(Math.random() * categoryImages.beverages.length)]})` }}></div>
@@ -122,27 +123,18 @@ const Menu = () => {
             )}
           </div>
         ))}
-        
+
       </div>
       <div className="recommendation">
         {recommendation.map((item, index) => (
           <div key={index} className="recommended-item">
             <div className="recommended-image" style={{ backgroundImage: `url(${item.image})` }}>
-              <div className="newt">{item.category.charAt(0).toUpperCase() + item.category.slice(1)}</div>
+              <div className="newt"><a href = {item.category.charAt(0).toUpperCase() + item.category.slice(1)}>{item.category.charAt(0).toUpperCase() + item.category.slice(1)}</a></div>
             </div>
-            
-          </div>
-        ))}
-        {recommendation.map((item, index) => (
-          <div key={index} className="recommended-item">
-            <div>{item['Food Item']}</div>
-            <div>{item.Description}</div>
-            <div>{item.Price}</div>
           </div>
         ))}
       </div>
-
-      </div>
+    </div>
   );
 };
 

@@ -1,0 +1,57 @@
+/* beverages.css */
+.menu-container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; 
+  overflow-x: auto; 
+  padding: 5px; 
+  padding-top: 70px;
+}
+
+.beverage-items {
+  margin-top:100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap:  10px;
+  justify-content: center; /* Center align beverage cards */
+}
+
+.beverage-item {
+  border: 5px solid red;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-image: repeating-linear-gradient(white, yellow, red, gray);
+  font-size: 15px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-style: oblique;
+  font-weight: 600;
+  width: 300px; /* Adjust card width as needed */
+}
+
+.beverage-item h3 {
+  font-style:normal;
+  font-size: 20px;
+  font-family: cursive;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.beverage-item p {
+  margin: 5px 0;
+  color: black;
+}
+
+/* Styles for the background image */
+.menu-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -12;
+}
+

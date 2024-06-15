@@ -7,6 +7,7 @@ import Details from './components/Details';
 import Landing from './components/Landing';
 import Footer from './components/Footer/Footer';
 import Menu from './components/Menu';
+import Beverages from './components/menu-items/beverages';
 import './App.css';
 
 function App() {
@@ -45,6 +46,7 @@ function MainContent({ isLoginVisible, setIsLoginVisible, isSignUpVisible, setIs
           <Route path="/signup" element={<Signup setIsSignUpVisible={setIsSignUpVisible} setIsLoginVisible={setIsLoginVisible} />} />
           <Route path="/login" element={<Login setIsLoginVisible={setIsLoginVisible} setIsSignUpVisible={setIsSignUpVisible} />} />
           <Route path="/Menu" element={<Menu />} />
+          <Route exact path = "/Menu/Beverages" element = {<Beverages />} />
         </Routes>
       </div>
       {isLoginVisible && <Login setIsLoginVisible={setIsLoginVisible} setIsSignUpVisible={setIsSignUpVisible} />}
