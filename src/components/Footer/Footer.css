@@ -155,6 +155,7 @@
   
   .footer-brand .btn {
     border-radius: 0%;
+    position: relative;
     background-color: #6b5427;
     color: var(--white);
     display: flex;
@@ -165,7 +166,7 @@
     letter-spacing: 1.5px;
   }
 
-  .footer-brand .btn :hover{
+  .footer-brand .btn :is(:hover, :focus-visible){
     background-color: #0b0a09;
     border: 1px solid #6b5427 ;
     padding: 14.5px 39px;
@@ -173,7 +174,7 @@
 
   .footer-brand .btn-text {
     padding: 10px 40px;
-    font-size: 1.2em;
+    font-size: 0.7em;
     font-weight: bold;
     color: var(--white);
   }

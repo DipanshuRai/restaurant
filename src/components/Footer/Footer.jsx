@@ -66,7 +66,7 @@ const Footer = () => {
               <div className="icon-wrapper">
                 <IoMdMail className="react-icon" aria-hidden="true" />
                 <input
-                  type="email"
+                    type="email"
                   name="email_address"
                   placeholder="Your email"
                   autoComplete="off"
@@ -74,8 +74,7 @@ const Footer = () => {
                 />
               </div>
               <button type="submit" className="btn btn-secondary">
-                <span className='btn-text'>SUBSCRIBE</span>
-              </button>
+                <span className='btn-text'>SUBSCRIBE</span>              </button>
             </form>
           </div>
 
