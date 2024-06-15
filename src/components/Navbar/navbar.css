@@ -19,7 +19,7 @@ header::before {
 
 .navbar{
     width: 100%;
-    height:60px;
+    height:70px;
     max-width: 1350px;
     margin: 0 auto;
     display: flex;
