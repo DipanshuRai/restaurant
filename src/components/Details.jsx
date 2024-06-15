@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import burger from '../assets/menu-images/burger/burgurr.jpg';
 import deserts from '../assets/images/service-1.jpg';
 import drinks from '../assets/images/service-3.jpg';
@@ -20,47 +21,47 @@ const Details = () => {
         <ul className="grid-list">
           <li>
             <div className="service-card">
-              <a href="/Menu" className="has-before hover:shine">
-                  <img src={burger} width="285" height="336" loading="lazy" className="img-cover" />
-              </a>
+              <Link to="/Menu" className="has-before hover:shine">
+                  <img src={burger} width="285" height="336" loading="lazy" className="img-cover" alt="Breakfast" />
+              </Link>
               <div className="card-content">
                 <h3 className="title-4 card-title">
-                  <a href="/Menu">Breakfast</a>
+                  <Link to="/Menu">Breakfast</Link>
                 </h3>
-                <a href="/Menu" className="btn-text hover-underline label-2">View Menu</a>
+                <Link to="/Menu" className="btn-text hover-underline label-2">View Menu</Link>
               </div>
             </div>
           </li>
           <li>
             <div className="service-card">
-              <a href="/Menu" className="has-before hover:shine">
-                  <img src={deserts} width="285" height="336" loading="lazy" className="img-cover" />
-              </a>
+              <Link to="/Menu" className="has-before hover:shine">
+                  <img src={deserts} width="285" height="336" loading="lazy" className="img-cover" alt="Desserts" />
+              </Link>
               <div className="card-content">
                 <h3 className="title-4 card-title">
-                  <a href="/Menu">Desserts</a>
+                  <Link to="/Menu">Desserts</Link>
                 </h3>
-                <a href="/Menu" className="btn-text hover-underline label-2">View Menu</a>
+                <Link to="/Menu" className="btn-text hover-underline label-2">View Menu</Link>
               </div>
             </div>
           </li>
           <li>
             <div className="service-card">
-              <a href="#" className="has-before hover:shine">
-                  <img src={drinks} width="285" height="336" loading="lazy" className="img-cover" />
-              </a>
+              <Link to="/Menu" className="has-before hover:shine">
+                  <img src={drinks} width="285" height="336" loading="lazy" className="img-cover" alt="Drinks" />
+              </Link>
               <div className="card-content">
                 <h3 className="title-4 card-title">
-                  <a href="#">Drinks</a>
+                  <Link to="/Menu">Drinks</Link>
                 </h3>
-                <a href="#" className="btn-text hover-underline label-2">View Menu</a>
+                <Link to="/Menu" className="btn-text hover-underline label-2">View Menu</Link>
               </div>
             </div>
           </li>
         </ul>
 
-        <img src={bg1} width="246" height="412" loading="lazy" className="shape shape-1 move-anim" />
-        <img src={bg2} width="343" height="345" loading="lazy" className="shape shape-2 move-anim" />
+        <img src={bg1} width="246" height="412" loading="lazy" className="shape shape-1 move-anim" alt="Background Shape 1" />
+        <img src={bg2} width="343" height="345" loading="lazy" className="shape shape-2 move-anim" alt="Background Shape 2" />
       </div>
     </section>
   );

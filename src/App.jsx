@@ -5,7 +5,7 @@ import Login from './components/Login';
 import Navbar from './components/Navbar';
 import Details from './components/Details';
 import Landing from './components/Landing';
-import Footer from './components/Footer/Footer';
+import Footer from './components/Footer';
 import Menu from './components/Menu';
 import './App.css';
 
