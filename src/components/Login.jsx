@@ -6,13 +6,17 @@ import InputBox from './Forms/InputBox';
 import SubmitButton from './Forms/SubmitButton';
 import "./Forms/form.css";
 
-export default function Login() {
+export default function Login({ setIsLoginVisible }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  const closeLogin = () => {
+    setIsLoginVisible(false);
+  };
+
   return (
-    <div className="form-body">
-      <div className='main'>
+    <div className="login-overlay" onClick={closeLogin}>
+      <div className="login-card" onClick={(e) => e.stopPropagation()}>
         <form action="">
           <Header title="Log In"/>
           <InputBox 

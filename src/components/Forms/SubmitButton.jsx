@@ -5,7 +5,7 @@ import "./form.css"
 
 const buttonTextMap = {
     "Sign Up": "Sign Up",
-    "Log in": "Log In",
+    "Log In": "Log In",
 };
 
 function SubmitButton(props) {

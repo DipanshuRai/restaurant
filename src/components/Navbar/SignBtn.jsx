@@ -1,12 +1,11 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react';
 
-function SignBtn() {
+function SignBtn({ onClick }) {
   return (
-    <div className="action_btn">
-        <Link to="/signup">Signup</Link>
-    </div>
-  )
+    <button className="sign-btn" onClick={onClick}>
+      Sign In
+    </button>
+  );
 }
 
-export default SignBtn
+export default SignBtn;

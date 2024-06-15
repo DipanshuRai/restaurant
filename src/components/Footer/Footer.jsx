@@ -9,35 +9,6 @@ const Footer = () => {
       <div className="container">
         <div className="footer-top grid-list">
 
-          {/* Left List */}
-          <ul className="footer-list">
-            <li>
-              <a href="#" className="label-2 footer-link hover-underline">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" className="label-2 footer-link hover-underline">
-                Menus
-              </a>
-            </li>
-            <li>
-              <a href="#" className="label-2 footer-link hover-underline">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href="#" className="label-2 footer-link hover-underline">
-                Our Chefs
-              </a>
-            </li>
-            <li>
-              <a href="#" className="label-2 footer-link hover-underline">
-                Contact
-              </a>
-            </li>
-          </ul>
-
           {/* Center Box */}
           <div className="footer-brand has-before has-after">
             <a href="#" className="logo">
@@ -78,8 +49,38 @@ const Footer = () => {
             </form>
           </div>
 
+          {/* Left List */}
+          <ul className="footer-list list-1">
+            <li>
+              <a href="#" className="label-2 footer-link hover-underline">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#" className="label-2 footer-link hover-underline">
+                Menus
+              </a>
+            </li>
+            <li>
+              <a href="#" className="label-2 footer-link hover-underline">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="#" className="label-2 footer-link hover-underline">
+                Our Chefs
+              </a>
+            </li>
+            <li>
+              <a href="#" className="label-2 footer-link hover-underline">
+                Contact
+              </a>
+            </li>
+          </ul>
+
+
           {/* Right List */}
-          <ul className="footer-list">
+          <ul className="footer-list list-2">
             <li>
               <a href="#" className="label-2 footer-link hover-underline">
                 Facebook
