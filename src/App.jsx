@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import Signup from './components/Signup';
+import BookTable from './components/BookTable';
 import Login from './components/Login';
 import Navbar from './components/Navbar';
 import Details from './components/Details';
@@ -11,51 +11,50 @@ import './App.css';
 
 function App() {
   const [isLoginVisible, setIsLoginVisible] = useState(false);
-  const [isSignUpVisible, setIsSignUpVisible] = useState(false);
+  const [isBookTableVisible, setIsBookTableVisible] = useState(false);
 
   return (
     <Router>
       <MainContent
         isLoginVisible={isLoginVisible}
         setIsLoginVisible={setIsLoginVisible}
-        isSignUpVisible={isSignUpVisible}
-        setIsSignUpVisible={setIsSignUpVisible}
+        isBookTableVisible={isBookTableVisible}
+        setIsBookTableVisible={setIsBookTableVisible}
       />
     </Router>
   );
 }
 
-function MainContent({ isLoginVisible, setIsLoginVisible, isSignUpVisible, setIsSignUpVisible }) {
+function MainContent({ isLoginVisible, setIsLoginVisible, isBookTableVisible, setIsBookTableVisible }) {
   const location = useLocation();
 
-  // Close both overlays when navigating to the home page
   useEffect(() => {
     if (location.pathname === '/') {
       setIsLoginVisible(false);
-      setIsSignUpVisible(false);
+      setIsBookTableVisible(false);
     }
   }, [location.pathname]);
 
   return (
     <>
-      <Navbar setIsLoginVisible={setIsLoginVisible} />
-      <div className={`main-content ${(isLoginVisible || isSignUpVisible) ? 'blurred' : ''}`}>
+      <Navbar setIsLoginVisible={setIsLoginVisible} setIsBookTableVisible={setIsBookTableVisible} />
+      <div className={`main-content ${(isLoginVisible || isBookTableVisible) ? 'blurred' : ''}`}>
         <Routes>
           <Route path='/' element={<Land />} />
-          <Route path="/signup" element={<Signup setIsSignUpVisible={setIsSignUpVisible} setIsLoginVisible={setIsLoginVisible} />} />
-          <Route path="/login" element={<Login setIsLoginVisible={setIsLoginVisible} setIsSignUpVisible={setIsSignUpVisible} />} />
-          <Route path="/Menu" element={<Menu />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/login" element={<Login setIsLoginVisible={setIsLoginVisible} />} />
+          <Route path="/book-table" element={<BookTable setIsBookTableVisible={setIsBookTableVisible} />} />
         </Routes>
       </div>
-      {isLoginVisible && <Login setIsLoginVisible={setIsLoginVisible} setIsSignUpVisible={setIsSignUpVisible} />}
-      {isSignUpVisible && <Signup setIsSignUpVisible={setIsSignUpVisible} setIsLoginVisible={setIsLoginVisible} />}
+      {isLoginVisible && <Login setIsLoginVisible={setIsLoginVisible} />}
+      {isBookTableVisible && <BookTable setIsBookTableVisible={setIsBookTableVisible} />}
     </>
   );
 }
 
 function Land() {
   const location = useLocation();
-  const hideNavbarPaths = ['/signup', '/login'];
+  const hideNavbarPaths = ['/book-table', '/login'];
   const shouldHideNavbar = hideNavbarPaths.includes(location.pathname);
   return (
     <>

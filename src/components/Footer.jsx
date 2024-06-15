@@ -25,7 +25,7 @@ const Footer = () => {
               <Link to="/" className="body-4 contact-link">
                 Booking Request : +91 123-XXXXX-69
               </Link>
-              <p className="body-4">Open : 09:00 am - 11:00 pm</p>
+              <p className="body-4">Open : 09:00 am - 10:00 pm</p>
             </div>
             <div className="wrapper">
               <img src={Separator} width="30%" alt="" />
