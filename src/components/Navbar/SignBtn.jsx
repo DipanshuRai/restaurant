@@ -2,7 +2,7 @@ import React from 'react';
 import './navbar.css';
 
 const SignBtn = ({ onClick, text }) => (
-  <button className="sign-btn" onClick={onClick}>
+  <button className="action_btn" onClick={onClick}>
     {text}
   </button>
 );

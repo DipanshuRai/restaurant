@@ -40,7 +40,7 @@ function Navbar({ setIsLoginVisible, setIsBookTableVisible }) {
         <ul className="links">
           {renderNavLinks()}
         </ul>
-        <SignBtn className='SubmitBtn' onClick={toggleLogin} text="Login" />
+        {/* <SignBtn className='SubmitBtn' onClick={toggleLogin} text="Login" /> */}
         <SignBtn className='SubmitBtn' onClick={toggleBookTable} text="Book a Table" />
         <div className="toggle_btn" onClick={toggleDropdown}>
           <FontAwesomeIcon icon={isDropdownOpen ? faXmark : faBars} />
@@ -48,7 +48,7 @@ function Navbar({ setIsLoginVisible, setIsBookTableVisible }) {
       </div>
       <div className={`dropdown_menu ${isDropdownOpen ? 'open' : ''}`}>
         {renderNavLinks()}
-        <li><SignBtn className='SubmitBtn' onClick={toggleLogin} text="Login" /></li>
+        {/* <li><SignBtn className='Submi tBtn' onClick={toggleLogin} text="Login" /></li> */}
         <li><SignBtn className='SubmitBtn' onClick={toggleBookTable} text="Book a Table" /></li>
       </div>
     </header>

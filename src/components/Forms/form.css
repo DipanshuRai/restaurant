@@ -52,7 +52,7 @@ form .input-box {
   font-size: 1.5rem;
   color: #fff;
   transition: border-color 0.3s ease, background-color 0.3s ease;
-  text-indent: 1.25rem;
+  padding: 0 1.25rem;
 }
 
 .input-box input::placeholder,
@@ -92,6 +92,7 @@ form button {
   color: #333;
   font-weight: 700;
   transition: background-color 0.3s ease;
+  margin-top: 20%;
 }
 
 .main button:hover {
@@ -123,20 +124,19 @@ form .login-link {
   color: #e6e6e6;
 }
 
-.input-box-group {
+form .input-box-group {
     display: flex;
     justify-content: space-between;
+    padding: 0;
+    margin: 0;
   }
   
-  .input-box-group .input-box {
-    flex: 1;
-    margin-right: 10px;
+  form .input-box-group .input-box {
+    margin-left: 0;
+    margin: 0;
     text-align: center;
   }
   
-  .input-box-group .input-box:last-child {
-    margin-right: 0;
-  }
   
   .main-content.blurred {
     filter: blur(5px);

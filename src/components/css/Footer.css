@@ -138,7 +138,11 @@
     display: flex;
     width: 70%; 
     justify-content: center;
+    margin: inherit;
   }
+
+  .footer-brand .input-wrapper button{ margin:0;}
+
   
   .footer-brand .icon-wrapper {
     flex-grow: 1; 
