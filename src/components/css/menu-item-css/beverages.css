@@ -1,51 +1,50 @@
-/* beverages.css */
 .menu-container1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; 
-  overflow-x: auto; 
-  padding: 5px; 
+  flex-wrap: wrap;
+  overflow-x: auto;
+  padding: 5px;
   padding-top: 70px;
+  height: 100%;
 }
 
-.beverage-items {
-  margin-top:100px;
+.menu-items {
+  margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
-  gap:  10px;
-  justify-content: center; /* Center align beverage cards */
+  gap: 10px;
+  justify-content: center;
 }
 
-.beverage-item {
-  border: 5px solid red;
+.menu-item {
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 4px 10px rgba(107, 84, 39, 0.2), 0 0 0 2px rgba(255, 255, 255, 0.1);
   padding: 20px;
-  background-image: repeating-linear-gradient(white, yellow, red, gray);
+  background-color: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(10px);
   font-size: 15px;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-style: oblique;
   font-weight: 600;
-  width: 300px; /* Adjust card width as needed */
+  width: 300px;
 }
 
-.beverage-item h3 {
-  font-style:normal;
+.menu-item h3 {
+  font-style: normal;
   font-size: 20px;
   font-family: cursive;
   font-weight: 600;
   margin-bottom: 10px;
-  color: black;
+  color: #f4f4f4;
 }
 
-.beverage-item p {
+.menu-item p {
   margin: 5px 0;
-  color: black;
+  color: #fff;
 }
 
-/* Styles for the background image */
-.menu-container img {
+/* .menu-container img {
   position: absolute;
   top: 0;
   left: 0;
@@ -53,5 +52,4 @@
   height: 100%;
   object-fit: cover;
   z-index: -12;
-}
-
+} */

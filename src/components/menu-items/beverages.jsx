@@ -6,10 +6,9 @@ import beverageData from './menu.json';
 const BeverageMenu = () => {
     const beverages = beverageData.menu.Beverages;
 
-    // Function to generate beverage cards
     const renderBeverageCards = () => {
         return beverages.map((beverage, index) => (
-            <div key={index} className="beverage-item" >
+            <div key={index} className="menu-item" >
                 <h3>{beverage["Food Item"]}</h3>
                 <p className='p1'>Price: {beverage.Price}</p>
                 {beverage.Calories && <p>Calories: {beverage.Calories}</p>}
@@ -21,7 +20,7 @@ const BeverageMenu = () => {
     return (
         <div className="menu-container1" style={{backgroundImage: `url(${menubg})`}}>
             {/* <img src={menubg} alt="" /> */}
-            <div className="beverage-items">
+            <div className="menu-items">
                 {renderBeverageCards()}
             </div>
         </div>

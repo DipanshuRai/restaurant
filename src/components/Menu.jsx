@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './css/Menu.css';
-
-
+import { Link } from 'react-router-dom';
 
 import coldCoffee from '../assets/menu-images/beverages/cold-coffee.jpg';
 import hotChocolate from '../assets/menu-images/beverages/hot-chocolate.jpg';
@@ -89,7 +88,6 @@ const Menu = () => {
 
   return (
     <div className="menu-container" style={{ backgroundImage: `url(${menubg})` }}>
-
       <div className="menu">
         {categories.map((category) => (
           <div
@@ -98,7 +96,7 @@ const Menu = () => {
             onClick={() => handleCategoryClick(category)}
           >
             <div className="category-content">
-              <h3><a href={"Menu/"+category.charAt(0).toUpperCase() + category.slice(1)}>{category.charAt(0).toUpperCase() + category.slice(1)}</a></h3>
+              <h3><Link to={`/Menu/${category.charAt(0).toUpperCase() + category.slice(1)}`}>{category.charAt(0).toUpperCase() + category.slice(1)}</Link></h3>
             </div>
             {category === 'beverages' && categoryImages.beverages && (
               <div className="beverage-image side-1" style={{ backgroundImage: `url(${categoryImages.beverages[Math.floor(Math.random() * categoryImages.beverages.length)]})` }}></div>
@@ -123,13 +121,12 @@ const Menu = () => {
             )}
           </div>
         ))}
-
       </div>
       <div className="recommendation">
         {recommendation.map((item, index) => (
           <div key={index} className="recommended-item">
             <div className="recommended-image" style={{ backgroundImage: `url(${item.image})` }}>
-              <div className="newt"><a href = {"Menu/" + item.category.charAt(0).toUpperCase() + item.category.slice(1)}>{item.category.charAt(0).toUpperCase() + item.category.slice(1)}</a></div>
+              <div className="newt"><Link to={`/Menu/${item.category.charAt(0).toUpperCase() + item.category.slice(1)}`}>{item.category.charAt(0).toUpperCase() + item.category.slice(1)}</Link></div>
             </div>
           </div>
         ))}
