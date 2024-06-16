@@ -125,6 +125,7 @@ const Menu = () => {
       <div className="recommendation">
         {recommendation.map((item, index) => (
           <div key={index} className="recommended-item">
+            <h2>FESTIVE DISCOUNTS ON</h2>
             <div className="recommended-image" style={{ backgroundImage: `url(${item.image})` }}>
               <div className="newt"><Link to={`/Menu/${item.category.charAt(0).toUpperCase() + item.category.slice(1)}`}>{item.category.charAt(0).toUpperCase() + item.category.slice(1)}</Link></div>
             </div>
