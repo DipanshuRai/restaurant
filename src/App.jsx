@@ -43,6 +43,8 @@ function MainContent({ isBookTableVisible, setIsBookTableVisible }) {
           <Route exact path = "/Menu/Beverages" element = {<Beverages />} />
 
           <Route path="/book-table" element={<BookTable setIsBookTableVisible={setIsBookTableVisible} />} />
+          <Route path="/about-us" element={<Details />} />
+          <Route path="/contact" element={<Footer />} />
 
         </Routes>
       </div>

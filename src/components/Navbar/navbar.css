@@ -115,7 +115,7 @@ li{
     top: 60px;
     height: 0;
     width:300px;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.667);
     backdrop-filter: blur(20px);
     border-radius: 10px;
     overflow: hidden;
@@ -124,12 +124,13 @@ li{
 }
 
 .dropdown_menu.open{
-    height: 280px;
+    height: 300px;
 }
 
 .dropdown_menu li{
     padding: 0.7rem;
     display:flex;
+    gap: 10px;
     align-items: center;
     justify-content: center;
 }
