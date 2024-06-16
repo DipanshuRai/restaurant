@@ -60,7 +60,7 @@ const Menu = () => {
     taco: [chickenTaco, vegTaco],
     wraps: [chickenKebabWrap, falafelWrap, paneerTikkaWrap, tandooriChickenWrap]
   });
-  const [recommendation, setRecommendation] = useState([]);
+  const [recommendation, setRecommendation] = useState({ category: '', image: '' });
 
   const pickRandomCategory = () => {
     const randomCategory = categories[Math.floor(Math.random() * categories.length)];
@@ -78,7 +78,7 @@ const Menu = () => {
       const randomRecImage =
         categoryImages[selectedCategory] &&
         categoryImages[selectedCategory][Math.floor(Math.random() * categoryImages[selectedCategory].length)];
-      setRecommendation([{ category: selectedCategory, image: randomRecImage }]);
+      setRecommendation({ category: selectedCategory, image: randomRecImage });
     }
   }, [selectedCategory, categoryImages]);
 
@@ -89,47 +89,101 @@ const Menu = () => {
   return (
     <div className="menu-container" style={{ backgroundImage: `url(${menubg})` }}>
       <div className="menu">
-        {categories.map((category) => (
-          <div
-            key={category}
-            className={`category ${category} ${selectedCategory !== category && selectedCategory !== '' ? '' : 'hidden'}`}
-            onClick={() => handleCategoryClick(category)}
-          >
-            <div className="category-content">
-              <h3><Link to={`/Menu/${category.charAt(0).toUpperCase() + category.slice(1)}`}>{category.charAt(0).toUpperCase() + category.slice(1)}</Link></h3>
+        <div className="left-column">
+          {['beverages', 'burger', 'sides'].map((category) => (
+            <div
+              key={category}
+              className={`category ${category}`}
+              onClick={() => handleCategoryClick(category)}
+            >
+              <div className="category-content">
+                <h3>
+                  <Link to={`/Menu/${category.charAt(0).toUpperCase() + category.slice(1)}`}>
+                    {category.charAt(0).toUpperCase() + category.slice(1)}
+                  </Link>
+                </h3>
+              </div>
+              {category === 'beverages' && categoryImages.beverages && (
+                <div
+                  className="beverage-image side-1"
+                  style={{
+                    backgroundImage: `url(${categoryImages.beverages[Math.floor(Math.random() * categoryImages.beverages.length)]})`
+                  }}
+                ></div>
+              )}
+              {category === 'burger' && categoryImages.burger && (
+                <div
+                  className="burger-image side-1"
+                  style={{
+                    backgroundImage: `url(${categoryImages.burger[Math.floor(Math.random() * categoryImages.burger.length)]})`
+                  }}
+                ></div>
+              )}
+              {category === 'sides' && categoryImages.sides && (
+                <div
+                  className="sides-image side-1"
+                  style={{
+                    backgroundImage: `url(${categoryImages.sides[Math.floor(Math.random() * categoryImages.sides.length)]})`
+                  }}
+                ></div>
+              )}
             </div>
-            {category === 'beverages' && categoryImages.beverages && (
-              <div className="beverage-image side-1" style={{ backgroundImage: `url(${categoryImages.beverages[Math.floor(Math.random() * categoryImages.beverages.length)]})` }}></div>
-            )}
-            {category === 'desserts' && categoryImages.desserts && (
-              <div className="dessert-image side-2" style={{ backgroundImage: `url(${categoryImages.desserts[Math.floor(Math.random() * categoryImages.desserts.length)]})` }}></div>
-            )}
-            {category === 'burger' && categoryImages.burger && (
-              <div className="burger-image side-1" style={{ backgroundImage: `url(${categoryImages.burger[Math.floor(Math.random() * categoryImages.burger.length)]})` }}></div>
-            )}
-            {category === 'sauces' && categoryImages.sauces && (
-              <div className="sauces-image side-2" style={{ backgroundImage: `url(${categoryImages.sauces[Math.floor(Math.random() * categoryImages.sauces.length)]})` }}></div>
-            )}
-            {category === 'sides' && categoryImages.sides && (
-              <div className="sides-image side-1" style={{ backgroundImage: `url(${categoryImages.sides[Math.floor(Math.random() * categoryImages.sides.length)]})` }}></div>
-            )}
-            {category === 'taco' && categoryImages.taco && (
-              <div className="taco-image side-2" style={{ backgroundImage: `url(${categoryImages.taco[Math.floor(Math.random() * categoryImages.taco.length)]})` }}></div>
-            )}
-            {category === 'wraps' && categoryImages.wraps && (
-              <div className="wraps-image side-1" style={{ backgroundImage: `url(${categoryImages.wraps[Math.floor(Math.random() * categoryImages.wraps.length)]})` }}></div>
-            )}
-          </div>
-        ))}
-      </div>
-      <div className="recommendation">
-        {recommendation.map((item, index) => (
-          <div key={index} className="recommended-item">
-            <div className="recommended-image" style={{ backgroundImage: `url(${item.image})` }}>
-              <div className="newt"><Link to={`/Menu/${item.category.charAt(0).toUpperCase() + item.category.slice(1)}`}>{item.category.charAt(0).toUpperCase() + item.category.slice(1)}</Link></div>
+          ))}
+        </div>
+
+        <div className="recommendation">
+          <div className="recommended-item">
+            <div className="recommended-image" style={{ backgroundImage: `url(${recommendation.image})` }}>
+              <div className="newt">
+                <Link to={`/Menu/${recommendation.category.charAt(0).toUpperCase() + recommendation.category.slice(1)}`}>
+                  {recommendation.category.charAt(0).toUpperCase() + recommendation.category.slice(1)}
+                </Link>
+              </div>
             </div>
           </div>
-        ))}
+        </div>
+
+        <div className="right-column">
+          {['taco', 'wraps', 'sauces'].map((category) => (
+            <div
+              key={category}
+              className={`category ${category}`}
+              onClick={() => handleCategoryClick(category)}
+            >
+              <div className="category-content">
+                <h3>
+                  <Link to={`/Menu/${category.charAt(0).toUpperCase() + category.slice(1)}`}>
+                    {category.charAt(0).toUpperCase() + category.slice(1)}
+                  </Link>
+                </h3>
+              </div>
+              {category === 'taco' && categoryImages.taco && (
+                <div
+                  className="taco-image side-2"
+                  style={{
+                    backgroundImage: `url(${categoryImages.taco[Math.floor(Math.random() * categoryImages.taco.length)]})`
+                  }}
+                ></div>
+              )}
+              {category === 'wraps' && categoryImages.wraps && (
+                <div
+                  className="wraps-image side-1"
+                  style={{
+                    backgroundImage: `url(${categoryImages.wraps[Math.floor(Math.random() * categoryImages.wraps.length)]})`
+                  }}
+                ></div>
+              )}
+              {category === 'sauces' && categoryImages.sauces && (
+                <div
+                  className="sauces-image side-2"
+                  style={{
+                    backgroundImage: `url(${categoryImages.sauces[Math.floor(Math.random() * categoryImages.sauces.length)]})`
+                  }}
+                ></div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
