@@ -68,6 +68,7 @@ button,select,textarea { display: block; }
 }
 
 .section-subtitle {
+  padding-top: 40px;
   position: relative;
   color: hsl(38, 61%, 73%);
   font-weight: 700;
