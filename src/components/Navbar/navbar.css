@@ -115,7 +115,7 @@ li{
     top: 60px;
     height: 0;
     width:300px;
-    background: rgba(0, 0, 0, 0.667);
+    background: rgba(0, 0, 0, 0.87);
     backdrop-filter: blur(20px);
     border-radius: 10px;
     overflow: hidden;

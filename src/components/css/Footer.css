@@ -234,3 +234,41 @@
     color: var(--gold-crayola);
     text-decoration: underline;
   }
+
+  @media (max-width: 768px) {
+    .footer-brand {
+      width: 90%;
+      padding: 50px 20px;
+    }
+  
+    .footer-brand .input-wrapper {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-brand {
+      width: 100%;
+      padding: 30px 15px;
+    }
+  
+    .footer-brand .input-wrapper {
+      width: 100%;
+      justify-content: space-between;
+      /* align-items: center; */
+    }
+  
+    .footer-brand .icon-wrapper {
+      margin-bottom: 0;
+      flex-grow: 1;
+    }
+  
+    .footer-brand .btn {
+      margin-left: 10px;
+    }
+  
+    .footer-brand .btn-text {
+      padding: 10px 20px;
+      font-size: 0.7em;
+    }
+  }
